@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pocketplans/screens/splash_screen.dart';
 import 'package:pocketplans/utils/color.dart';
 
 void main() {
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme:
           ThemeData.dark().copyWith(scaffoldBackgroundColor: backgroundColor),
-      home: const Text("Hello World"),
+      debugShowCheckedModeBanner: false,
+      home: const SplashScreen(),
     );
   }
 }
