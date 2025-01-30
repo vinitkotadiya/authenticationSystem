@@ -11,19 +11,19 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  @override
   final AuthMethods _authMethods = AuthMethods();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SizedBox(
-      width: double.infinity,
+        body: Center(
+            child: SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
             'assets/loginImage.png',
+            width: 600,
           ),
           SignInButton(
             Buttons.google,
@@ -38,6 +38,6 @@ class _LoginScreenState extends State<LoginScreen> {
           )
         ],
       ),
-    ));
+    )));
   }
 }
