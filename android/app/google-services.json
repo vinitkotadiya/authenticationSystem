@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1002443824199",
+    "project_id": "pocketplans-cca04",
+    "storage_bucket": "pocketplans-cca04.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002443824199:android:c0aeb6ef1a03106e2ae562",
+        "android_client_info": {
+          "package_name": "com.example.pocketplans"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002443824199-l0hgfjbb5iul1913pinq4l9oglhj6884.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pocketplans",
+            "certificate_hash": "88025c02dd46dcbb4cea2e01da2f1995b3d0161b"
+          }
+        },
+        {
+          "client_id": "1002443824199-f55vj0mtg1eluhlgca912ape19743o64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwp313YpyJErY-k-n6LkEJd1kGQWUoYE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002443824199-f55vj0mtg1eluhlgca912ape19743o64.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1002443824199-5omjsq1mfk924f7jmng5hiskp9ir05m4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.pocketplans"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

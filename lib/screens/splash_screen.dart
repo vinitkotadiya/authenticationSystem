@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pocketplans/screens/login_screen.dart';
 import 'package:pocketplans/utils/color.dart';
 import 'dart:async';
@@ -15,19 +14,10 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
-  late Animation<double> _animation;
-
   @override
   void initState() {
-    _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 3000));
-    _animation = CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.bounceOut,
-        reverseCurve: Curves.bounceIn);
-    _animationController.forward();
     Timer(
-        const Duration(milliseconds: 2500),
+        const Duration(milliseconds: 2800),
         () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (_) => const LoginScreen())));
     super.initState();
@@ -45,16 +35,9 @@ class _SplashScreenState extends State<SplashScreen>
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return Scaffold(
       backgroundColor: backgroundColor,
-      body: Container(
-        child: Center(
-          child: ScaleTransition(
-            scale: _animation,
-            child: SvgPicture.asset(
-              "assets/icons/splash_icon.svg",
-              height: 310,
-              width: 310,
-            ),
-          ),
+      body: Center(
+        child: Image.asset(
+          "assets/splashlogo.gif",
         ),
       ),
     );
