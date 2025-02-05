@@ -1,12 +1,13 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:pocketplans/Repository/user_repository.dart';
+import 'package:pocketplans/models/user_model.dart';
 import 'package:pocketplans/utils/utils.dart';
 
 class AuthMethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
+  UserRepository userRepository = UserRepository();
   Stream<User?> get authChanges => _auth.authStateChanges();
   Future<bool> signInGoogle(BuildContext context) async {
     bool res = false;
@@ -23,11 +24,12 @@ class AuthMethods {
       User? user = userCredential.user;
       if (user != null) {
         if (userCredential.additionalUserInfo!.isNewUser) {
-          await _firebaseFirestore.collection('users').doc(user.uid).set({
-            'username': user.displayName,
-            'uid': user.uid,
-            'profilePhoto': user.photoURL,
-          });
+          UserModel userModel = new UserModel(
+              userId: user.uid,
+              userName: user.displayName,
+              userImage: user.photoURL,
+              userEmail: user.email);
+          userRepository.addData('users', userModel.toJson(), user.uid);
         }
         res = true;
       }
