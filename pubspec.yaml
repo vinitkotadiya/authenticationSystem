@@ -34,10 +34,11 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_iconly: ^1.0.2
+  flutter_lints: ^4.0.0
   google_sign_in: ^6.2.2
   line_awesome_flutter: ^3.0.1
   sign_in_button: ^3.0.0
-  flutter_lints: ^4.0.0
+  card_swiper: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +61,7 @@ flutter:
     - assets/icons/
     - assets/
     - assets/profile/
+    - assets/banners/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see

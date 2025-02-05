@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pocketplans/services/assets_manager.dart';
+import 'package:pocketplans/widgets/app_name_text.dart';
+import 'package:card_swiper/card_swiper.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +13,33 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text("HomeScreen")));
+    List<String> bannerImages = [AssetsManager.banner1, AssetsManager.banner2];
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset(
+            AssetsManager.shoppingBasket,
+          ),
+        ),
+        title: const AppNameTextWidget(fontSize: 20),
+      ),
+      body: Column(children: [
+        SizedBox(
+          height: size.height * 0.25,
+          child: Swiper(
+            itemBuilder: (BuildContext context, int index) {
+              return Image.asset(
+                bannerImages[index],
+                fit: BoxFit.fill,
+              );
+            },
+            itemCount: bannerImages.length,
+            pagination: SwiperPagination(),
+          ),
+        ),
+      ]),
+    );
   }
 }
