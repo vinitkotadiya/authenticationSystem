@@ -8,8 +8,8 @@
 
 // import '../model/ad_slider_model.dart';
 // import '../model/event_model.dart';
-// import '../model/menu_model.dart';
-// import '../utils/constants.dart';
+import '../models/menu_model.dart';
+//import '../utils/constants.dart';
 
 // List<AdSliderModel> sliderData = [
 //   AdSliderModel(url: "assets/slider_banner.png", redirectUrl: Constants.baseApiUrl),
@@ -17,14 +17,14 @@
 //   AdSliderModel(url: "assets/slider_banner.png", redirectUrl: Constants.baseApiUrl),
 // ];
 
-// List<MenuModel> menus = [
-//   MenuModel(name: "Movies", asset: "assets/icons/film.svg"),
-//   MenuModel(name: "Events", asset: "assets/icons/spotlights.svg"),
-//   MenuModel(name: "Plays", asset: "assets/icons/theater_masks.svg"),
-//   MenuModel(name: "Sports", asset: "assets/icons/running.svg"),
-//   MenuModel(name: "Activity", asset: "assets/icons/flag.svg"),
-//   MenuModel(name: "Monum", asset: "assets/icons/pyramid.svg"),
-// ];
+List<MenuModel> menus = [
+  MenuModel(name: "Movies", asset: "assets/icons/film.svg"),
+  MenuModel(name: "Events", asset: "assets/icons/spotlights.svg"),
+  MenuModel(name: "Plays", asset: "assets/icons/theater_masks.svg"),
+  MenuModel(name: "Sports", asset: "assets/icons/running.svg"),
+  MenuModel(name: "Activity", asset: "assets/icons/flag.svg"),
+  MenuModel(name: "Monum", asset: "assets/icons/pyramid.svg"),
+];
 
 // List<OfferModel> offers = [
 //   OfferModel(
@@ -133,13 +133,13 @@
 //   ),
 // ];
 
-// List<String> cities = [
-//   "New Delhi",
-//   "Banglore",
-//   "Kolkata",
-//   "Chennai",
-//   "Lucknow",
-// ];
+List<String> cities = [
+  "New Delhi",
+  "Banglore",
+  "Kolkata",
+  "Chennai",
+  "Lucknow",
+];
 
 // List<CrewCastModel> crewCast = [
 //   CrewCastModel(
@@ -175,17 +175,17 @@
 //   TheatreModel(id: "4", name: "KG theatres - 4K"),
 // ];
 
-// List<String> facilityAsset = [
-//   "assets/icons/cancel.svg",
-//   "assets/icons/parking.svg",
-//   "assets/icons/cutlery.svg",
-//   "assets/icons/rocking_horse.svg",
-// ];
+List<String> facilityAsset = [
+  "assets/icons/cancel.svg",
+  "assets/icons/parking.svg",
+  "assets/icons/cutlery.svg",
+  "assets/icons/rocking_horse.svg",
+];
 
-// List<String> screens = [
-//   "3D",
-//   "2D",
-// ];
+List<String> screens = [
+  "3D",
+  "2D",
+];
 
 // final seatLayout = SeatLayoutModel(
 //     rows: 10,
@@ -201,4 +201,4 @@
 //     isLastFilled: true,
 //     rowBreaks: [5, 3, 2]);
 
-// final List<int> s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+final List<int> s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

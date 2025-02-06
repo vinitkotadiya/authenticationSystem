@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pocketplans/services/assets_manager.dart';
+import 'package:pocketplans/utils/menu_item.dart';
 import 'package:pocketplans/widgets/app_name_text.dart';
 import 'package:card_swiper/card_swiper.dart';
 
@@ -37,6 +38,24 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             itemCount: bannerImages.length,
             pagination: SwiperPagination(),
+          ),
+        ),
+        const Text(
+          "Seat Categories",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Color.fromRGBO(255, 255, 255, 1),
+          ),
+        ),
+        const MyMenuItem(),
+        const SizedBox(
+          height: 15,
+        ),
+        const Text(
+          "Recomended Seats",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Color.fromRGBO(255, 255, 255, 1),
           ),
         ),
       ]),
