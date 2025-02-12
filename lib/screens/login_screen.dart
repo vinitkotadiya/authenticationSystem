@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pocketplans/resources/auth_methods.dart';
 import 'package:pocketplans/root_screen.dart';
-import 'package:pocketplans/screens/home_screen.dart';
 import 'package:sign_in_button/sign_in_button.dart';
 
 class LoginScreen extends StatefulWidget {

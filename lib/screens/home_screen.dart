@@ -26,39 +26,60 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         title: const AppNameTextWidget(fontSize: 20),
       ),
-      body: Column(children: [
-        SizedBox(
-          height: size.height * 0.25,
-          child: Swiper(
-            itemBuilder: (BuildContext context, int index) {
-              return Image.asset(
-                bannerImages[index],
-                fit: BoxFit.fill,
-              );
-            },
-            itemCount: bannerImages.length,
-            pagination: SwiperPagination(),
+      body: SingleChildScrollView(
+        child: Column(children: [
+          SizedBox(
+            height: size.height * 0.25,
+            child: Swiper(
+              itemBuilder: (BuildContext context, int index) {
+                return Image.asset(
+                  bannerImages[index],
+                  fit: BoxFit.fill,
+                );
+              },
+              itemCount: bannerImages.length,
+              pagination: SwiperPagination(),
+            ),
           ),
-        ),
-        const Text(
-          "Seat Categories",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Color.fromRGBO(255, 255, 255, 1),
+          const Text(
+            "Categories",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color.fromRGBO(255, 255, 255, 1),
+            ),
           ),
-        ),
-        const MyMenuItem(),
-        const SizedBox(
-          height: 15,
-        ),
-        const Text(
-          "Recomended Seats",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Color.fromRGBO(255, 255, 255, 1),
+          const MyMenuItem(),
+          const SizedBox(
+            height: 15,
           ),
-        ),
-      ]),
+          const Text(
+            "Events",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color.fromRGBO(255, 255, 255, 1),
+            ),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          GridView.builder(
+              itemCount: 8,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 20,
+                childAspectRatio: 0.9,
+              ),
+              itemBuilder: (context, index) {
+                return Container(
+                  padding: const EdgeInsets.all(20),
+                  color: Colors.blueGrey.shade100,
+                );
+              }),
+        ]),
+      ),
     );
   }
 }

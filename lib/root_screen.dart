@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:pocketplans/screens/cart_screen.dart';
+import 'package:pocketplans/screens/cart/cart_screen.dart';
 import 'package:pocketplans/screens/home_screen.dart';
 import 'package:pocketplans/screens/profile_screen.dart';
 

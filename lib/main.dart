@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             if (snapshot.hasData) {
               return const RootScreen();
             }
-            return SplashScreen();
+            return const SplashScreen();
           }),
     );
   }
